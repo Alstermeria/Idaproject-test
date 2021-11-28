@@ -1,0 +1,315 @@
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #E5E5E5;
+  box-sizing: border-box;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 32px;
+}
+
+.container > div {
+  width: 332px;
+}
+
+.container > div h2 {
+  font-weight: 600;
+  font-size: 28px;
+  padding-bottom: 16px;
+  margin: 0;
+}
+
+.container > div .imgPickerForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 24px;
+  background: #FFFEFB;
+  -webkit-box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+}
+
+.container > div .imgPickerForm div {
+  position: relative;
+}
+
+.container > div .imgPickerForm div .err-text {
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: -0.02em;
+  color: #FF8484;
+  margin: 0;
+  position: absolute;
+  bottom: 2px;
+  opacity: 0;
+}
+
+.container > div .imgPickerForm label {
+  position: relative;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: -0.02em;
+  color: #49485E;
+  margin-bottom: 4px;
+}
+
+.container > div .imgPickerForm label::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #FF8484;
+}
+
+.container > div .imgPickerForm label:nth-child(1)::before {
+  left: 96px;
+}
+
+.container > div .imgPickerForm label:nth-child(3)::before {
+  width: 0;
+}
+
+.container > div .imgPickerForm label:nth-child(5)::before {
+  left: 137px;
+}
+
+.container > div .imgPickerForm label:nth-child(7)::before {
+  left: 54px;
+}
+
+.container > div .imgPickerForm input {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 10px 16px;
+  font-size: 12px;
+  border: 1px solid rgba(124, 124, 124, 0.007);
+  background: #FFFEFB;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container > div .imgPickerForm input:focus, .container > div .imgPickerForm input:active {
+  outline: none;
+}
+
+.container > div .imgPickerForm .err {
+  border: 1px solid #FF8484;
+}
+
+.container > div .imgPickerForm textarea {
+  padding: 10px 16px;
+  height: 106px;
+  margin-bottom: 16px;
+  background: #FFFEFB;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-size: 12px;
+  border: none;
+  resize: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container > div .imgPickerForm textarea:focus, .container > div .imgPickerForm textarea:active {
+  outline: none;
+}
+
+.container > div .imgPickerForm button {
+  padding: 10px 0;
+  margin-top: 8px;
+  width: 100%;
+  background: #EEEEEE;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #B4B4B4;
+  border: none;
+  cursor: pointer;
+}
+
+.container > div .imgPickerForm button:hover {
+  background: #7BAE73;
+  color: #fff;
+}
+
+.container #priceFilter {
+  position: absolute;
+  top: 31px;
+  right: 31px;
+  padding: 10px 16px;
+  background: #FFFEFB;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: none;
+  color: #B4B4B4;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.container #priceFilter:focus, .container #priceFilter:active {
+  outline: none;
+}
+
+.container .gallery {
+  padding-top: 47px;
+  padding-left: 19px;
+  width: calc(100% - 332px);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (332px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 332px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.container .gallery div {
+  color: #3F3F3F;
+}
+
+.container .gallery .img__container {
+  position: relative;
+  background-color: #fff;
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity 1000ms linear;
+  transition: opacity 1000ms linear;
+}
+
+.container .gallery .img__container:hover .img__delete {
+  opacity: 1;
+}
+
+.container .gallery .img__container .img__delete {
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  background-color: #FF8484;
+  width: 17px;
+  height: 17px;
+  padding: 8px;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.container .gallery .img__container .img__delete:hover {
+  background-color: #fa2323;
+}
+
+.container .gallery .img__container .img {
+  border-radius: 4px 4px 0px 0px;
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+.container .gallery .img__container .img__price__container {
+  background-color: #fff;
+  padding: 16px;
+}
+
+.container .gallery .img__container .img__name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  padding-bottom: 16px;
+}
+
+.container .gallery .img__container .img__description {
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 32px;
+}
+
+.container .gallery .img__container .img__price__label {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  padding-bottom: 4px;
+}
+
+@media (max-width: 768.98px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container > div {
+    width: 100%;
+  }
+  .container .gallery {
+    padding-top: 40px;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 540.98px) {
+  .container .gallery {
+    -ms-grid-columns: (100%)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 100%);
+  }
+  .container .gallery .img__container img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 480.98px) {
+  .container #priceFilter {
+    position: static;
+    margin: 20px 0;
+  }
+  .container .gallery {
+    padding-top: 12px;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

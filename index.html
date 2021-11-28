@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h2>Добавление товара</h2>
+        <form class="imgPickerForm" id="imgSrcForm">
+          <label>Наименование товара</label>
+          <div>
+          <input class="title-input" name="imgTitle" type="text" required placeholder="Введите наименование товара">
+          <p class="err-text first-err">Поле является обязательным</p>
+        </div>
+          <label>Описание товара</label>
+          <textarea name="imgAlt" type="text" placeholder="Введите описание товара"></textarea>
+          <label>Ссылка на изображение товара</label>
+          <div>
+       <input class="link-input" name="imgSrc" placeholder="Введите ссылку">
+       <p class="err-text second-err">Поле является обязательным</p>
+        </div>
+       <label>Цена товара</label>
+       <div>
+       <input class="price-input" type="text" name="price" placeholder="Введите цену">
+       <p class="err-text third-err">Поле является обязательным</p>
+        </div>
+       <button disabled type='submit'>Добавить товар</button>
+         </form>
+       </div>
+      
+         <select id="priceFilter">
+        <option value="min">Самые дешевые</option>
+        <option value="max">Самые дорогие</option>
+      </select>
+       <div class="gallery" id="gallery"></div>
+      </div>
+    
+<script src="js/script.js"></script>
+</body>
+</html>
